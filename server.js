@@ -10,7 +10,9 @@ const morgan = require('morgan');
 const session = require('express-session');
 
 
-// NEW MIDDLEWARE 
+const authCtrl = require('./controllers/auth.js'); //Import auth controller
+
+// NEW MIDDLEWARE Imported
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
@@ -20,11 +22,13 @@ mongoose.connection.on('connected', () => {
 console.log(`Connected to MongoDB ${mongoose.connection.name}.`); // This will show in the console that i am connected 
 });
 
+// MIDDLEWARE 
 
-
+app.use(passUserToView);
 app.use(express.urlencoded({ extended: false}));
 
 app.use(methodOverride('_method'));
+app.use(morgan('dev'));
 
 app.use(
     session({
@@ -34,8 +38,9 @@ app.use(
     })
 );
 
-// MIDDLEWARE 
-app.use(passUserToView);
+
+
+
 
 
 // ROUTES 
@@ -85,9 +90,10 @@ app.get('/users/:userId/meetings/:meetingId', async (req, res) => {
 
 
 // Other MIDDLE WARE
+app.use('/auth', authCtrl);
 app.use(isSignedIn);
 
 // PORT LISTENER
-app.listen(3000, ()=> {
-    console.log('Listening on Port 3000')
+app.listen(3500, ()=> {
+    console.log('Listening on Port 3500')
 });

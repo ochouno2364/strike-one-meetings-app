@@ -47,7 +47,7 @@ const userSchema = mongoose.Schema({
     meetings: [meetingSchema],
 });
 
-
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+
