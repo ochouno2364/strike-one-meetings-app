@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The BallPark</title>
+  </head>
+  <body>
+    <h1>The BallPark</h1>
+    <a href="/users/<%=user._id%>/meetings/new">Add an App</a>
+    <!-- Add the following: -->
+    <ol>
+      <% meetings.forEach((meeting)=>{ %>
+         <!-- Add a link around each application, directing to the 'show' page -->
+    <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>">
+      <li><%= meeting.name %> at <%= meeting.level %></li>
+      <% }) %>
+    </ol>
+  </body>
+</html>
