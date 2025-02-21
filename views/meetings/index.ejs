@@ -7,11 +7,9 @@
   </head>
   <body>
     <h1>The BallPark</h1>
-    <a href="/users/<%=user._id%>/meetings/new">Add an App</a>
-    <!-- Add the following: -->
+    <a href="/users/<%=user._id%>/meetings/new">Add a Post</a>
     <ol>
       <% meetings.forEach((meeting)=>{ %>
-         <!-- Add a link around each application, directing to the 'show' page -->
     <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>">
       <li><%= meeting.name %> at <%= meeting.level %></li>
       <% }) %>

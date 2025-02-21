@@ -37,19 +37,34 @@ router.post('/sign-up', async (req, res) => {
 
 // SIGN IN A USER ROUTE
 router.post('/sign-in', async (req, res) => {
-    const userInDatabase = await User.findOne({username: req.body.username});
-    if(!userInDatabase) {
-        return res.send('Log in failed. Try Again!');
+    const userInDatabase = await User.findOne({username: req.body.username}); // find the user in the database by the username
+    if(!userInDatabase) { // if the user is not in the database
+        return res.send('Log in failed. Try Again!'); // show that the user failed to log in correctly
     }
-    const validPassword = bcrypt.compareSync(req.body.password, userInDatabase.password);
-    if(!validPassword) {
-        return res.send('Log in failed. Try Again!');
-    }
+    const validPassword = bcrypt.compareSync(req.body.password, userInDatabase.password); //use bcrypt to compare the user enterd password to the password for the user in the database
+    if(!validPassword) { // if the password is incorrect or dosent exist in the database 
+        return res.send('Log in failed. Try Again!'); // show that the user failed to log in
+    } 
+    // if the username and password are correct create a session
     req.session.user = {
         username: userInDatabase.username,
         _id: userInDatabase._id
     };
-
-    res.redirect('/');
+    
+    req.session.save(() => {
+        res.redirect('/'); //send the user to the home page
+    });
+    
 });
+
+
+// SIGN USER OUT ROUTE
+router.get('/sign-out', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/'); // send the user abck to the home page
+    }); // if the user clicks the sig out link destroy the session 
+    
+});
+
+
 module.exports = router; // Exporting my router

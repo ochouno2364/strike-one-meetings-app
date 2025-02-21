@@ -6,9 +6,19 @@
   <title>StrikeOne App</title>
 </head>
 <body>
-  <a href="/auth/sign-up">Create Account</a>
-  <a href="/auth/sign-in">Sign In</a>
-  <h1>Welcome to StrikeOne!</h1>
+    <% if (user) { %>
+    <h1>Welcome to StrikeOne, <%= user.username %>!</h1>
+    <p> 
+        <a href="/auth/sign-out">Sign Out</a>
+        <a href="/users/:userId/meetings">Enter the BallPark</a>
+    </p>
+    <% } else { %>
+    <h1>Welcome to StrikeOne!</h1>
+  <p>
+    <a href="/auth/sign-up">Create Account</a> or <a href="/auth/sign-in">Sign In</a>
+  </p>
+  <% } %>
+
   <p>A place where you can easily connect and interact with players and coaches near you.</p>
 </body>
 </html>
