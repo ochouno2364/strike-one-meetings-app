@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= meeting.name %></title>
+  </head>
+  <body>
+    <h1><%= meeting.position %> <%= meeting.name %></h1>
+    <% if (meeting.school) { %>
+    <p>I Attend/Coach: <%= meeting.school %></p>
+    <% } %> <% if (meeting.residence) { %>
+    <a href="<%= meeting.residence %>">Check Location</a>
+    <% } %>
+    <p>Current Status: <%= meeting.status %></p>
+    <p>Level: <%= meeting.level %></p>
+    <p>Age: <%= meeting.age %></p>
+    <p>Contact Info: <%= meeting.information %></p>
+    
+    
+    
+
+    <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>/edit">
+        <button type="submit">Edit Your Post</button>
+      </a>
+      <br>
+      <br>
+       
+
+     
+     <form
+     action="/users/<%= user._id %>/meetings/<%= meeting._id %>?_method=DELETE"
+     method="POST">
+   
+     <button type="submit">Delete This Post</button>
+   </form>
+  </body>
+</html>

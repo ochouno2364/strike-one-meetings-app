@@ -27,9 +27,13 @@ const meetingSchema = new mongoose.Schema({
         type: String,
         reuired: true,
     },
+    information: {
+        type: Number,
+        required: false,
+    },
     status: {
         type: String,
-        enum: ['Interested in Training', 'Looking for a Team', 'Just for Fun' ],
+        enum: ['Training', 'Looking', 'Fun' ],
     },
 });
 

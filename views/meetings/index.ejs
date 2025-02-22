@@ -8,11 +8,11 @@
   <body>
     <h1>The BallPark</h1>
     <a href="/users/<%=user._id%>/meetings/new">Add a Post</a>
-    <ol>
+    <ul>
       <% meetings.forEach((meeting)=>{ %>
     <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>">
-      <li><%= meeting.name %> at <%= meeting.level %></li>
+      <li><%= meeting.position %> <%= meeting.name %></li>
       <% }) %>
-    </ol>
+    </ul>
   </body>
 </html>

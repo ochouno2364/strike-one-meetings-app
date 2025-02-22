@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Meeting Post</title>
+  </head>
+  <body>
+    
+    <h1>Edit Meeting Post</h1>
+
+    <form
+    action="/users/<%= user._id %>/meetings/<%= meeting._id %>?_method=PUT"
+    method="POST"
+  >
+        <label for="level">Coach or Player:</label>
+        <select id="level" name="level" id="level" value="<%= meeting.level %>"  required>
+          <option value="coach">Coach</option>
+          <option value="player">Player</option>
+        </select>
+        <br>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+        <br>
+        <br>
+        <label for="position">Position:</label>
+        <input type="text" name="position" id="position" required />
+        <br>
+        <br>
+        <label for="age">How old are you?:</label>
+        <input type="text" name="age" id="age" required/>
+        <br>
+        <br>
+        <label for="school">What School do you Attend/Coach?:</label>
+        <input type="text" name="school" id="school" />
+        <br>
+        <br>
+        <label for="residence">What area are you located:</label>
+        <input type="text" name="residence" id="residence" required/>
+        <br>
+        <br>
+        <label for="information">Contact Info:</label>
+        <input type="text" name="information" id="information"/>
+        <br>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="Training">Interested In Training</option>
+          <option value="Looking">Looking For Team</option>
+          <option value="Fun">Just For Fun</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Update Post</button>
+      </form>
+  </body>
+</html>
