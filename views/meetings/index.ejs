@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>The BallPark</title>
   </head>
-  <body>
+  <body class="body-background">
     <%- include('../partials/_navbar.ejs') %>
+    <div class="all-meetings-body">
+        <div class="all-meetings-header">
     <h1>The BallPark</h1>
-    <a href="/users/<%=user._id%>/meetings/new">Add a Post</a>
+    <a class="add-post-link" href="/users/<%=user._id%>/meetings/new">Add a Post</a>
+    </div>
     <ul>
       <% meetings.forEach((meeting)=>{ %>
     <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>">
       <li><%= meeting.position %> <%= meeting.name %></li>
       <% }) %>
     </ul>
+    </div>
   </body>
 </html>

@@ -1,11 +1,19 @@
-
+<link rel="stylesheet" href="/stylesheets/partials.css" />
 <nav>
     <% if(user) { %>
-    <a href="/users/<%= user._id %>/meetings">The BallPark</a>
-    <a href="/auth/sign-out">Sign Out</a>
+    <div class="navbar">
+        <div class="nav-links">
+    <a class="authlink" href="/users/<%= user._id %>/meetings">The BallPark</a>
+    <a class="authlink" href="/auth/sign-out">Sign Out</a>
+    </div>
+    </div>
     <% } else { %>
-    <a href="/auth/sign-in">Sign In</a> 
-    <a href="/auth/sign-up">Create An Account</a>
+        <div class="navbar">
+            <div class="nav-links">
+    <a class="authlink" href="/auth/sign-in">Sign In</a> 
+    <a class="authlink" href="/auth/sign-up">Create An Account</a>
+     </div>
+    </div>
     <% } %>
   </nav>
   

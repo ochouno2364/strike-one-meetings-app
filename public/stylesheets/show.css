@@ -1,0 +1,121 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://appstatesports.com/images/2020/11/11/Drone_Pics_Campus_and_Viaduct_2.jpg');
+
+body {
+  display: flex;
+  background-image: url('https://appstatesports.com/images/2020/11/11/Drone_Pics_Campus_and_Viaduct_2.jpg');
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #9ac2ef;
+}
+
+.show-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.show-header > h1 {
+  color: #f3edeb;
+  font-size: 3.4em;
+  margin-left: 10px;
+}
+
+.show-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 30px;
+}
+
+button {
+  padding: 8px 10px;
+  background-color: #da1616;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  width: 10em;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #df0707;
+}
+
+.show-actions > a {
+  background-color: #233ea0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 10px;
+  border-radius: 30px;
+  width: 10em;
+  text-align: center;
+  margin: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.show-actions > a:hover {
+  background-color: #1b43a8;
+}
+
+p {
+  color: #ce4866;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 10px 30px;
+  text-align: center;
+}
+
+.show-info-container {
+  width: 90%;
+  margin: 20px 0;
+}
+
+.show-info-container > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+  margin: 20px;
+}
+
+.show-info-container > a:hover {
+  color: #e0e2e9;
+}
+
+.show-residence {
+  background-color: #050303;
+  width: 85%;
+  border-radius: 20px;
+  padding: 40px 40px 20px 40px;
+  margin: 20px 10px;
+}
+
+h2 {
+  margin: 0 10px;
+  color: #d8d7b3;
+}
+
+.show-residence > p {
+  font-weight: normal;
+  color:#d8d7b3;
+  text-align: left;
+  font-size: 1.2em;
+}

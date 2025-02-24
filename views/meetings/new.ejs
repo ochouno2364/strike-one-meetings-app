@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add a New Meeting Post</title>
   </head>
-  <body>
+  <body class="new-background">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Meeting Post</h1>
-
+    <div class="new-body">
     <form action="/users/<%= user._id %>/meetings" method="POST">
         <label for="level">Coach or Player:</label>
         <select id="level" name="level" id="level" required>
@@ -53,6 +53,7 @@
         <button type="submit">Add Post</button>
 
       </form>
+      </div>
   </body>
 </html>
 

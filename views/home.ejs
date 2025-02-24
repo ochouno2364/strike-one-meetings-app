@@ -6,20 +6,29 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>StrikeOne App</title>
 </head>
-<body>
-    <% if (user) { %>
-    <h1>Welcome to StrikeOne, <%= user.username %>!</h1>
-    <p> 
-        <a href="/auth/sign-out">Sign Out</a>
-        <a href="/users/:userId/meetings">Enter the BallPark</a>
-    </p>
+<body class="home-body">
+    <% if(user) { %>
+        <%- include('./partials/_navbar.ejs') %>
     <% } else { %>
-    <h1>Welcome to StrikeOne!</h1>
-  <p>
-    <a href="/auth/sign-up">Create Account</a> or <a href="/auth/sign-in">Sign In</a>
-  </p>
-  <% } %>
-
-  <p>A place where you can easily connect and interact with players and coaches near you.</p>
+   
+    <% } %>
+    
+    <div class="home-container">
+        <div class="text-container">
+            <% if (user) { %>
+                <h1 class="main-header">Welcome to StrikeOne, <%= user.username %>!</h1>
+                <% } else { %>
+                <h1 class="main-header">Welcome to StrikeOne!</h1>  
+        </div>
+        <div class="auth-links">
+            <p>
+                <a class="signup-link" href="/auth/sign-up">Create Account</a> or <a class="signin-link" href="/auth/sign-in">Sign In</a>
+              </p>
+              <% } %>
+            
+              <p class="subheader">A place where you can easily connect and interact with players and coaches near you.</p>
+        </div>
+    </div>
+  
 </body>
 </html>

@@ -3,39 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= meeting.name %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-
-    <h1><%= meeting.position %> <%= meeting.name %></h1>
-    <% if (meeting.school) { %>
-    <p>I Attend/Coach: <%= meeting.school %></p>
-    <% } %> <% if (meeting.residence) { %>
-    <a href="<%= meeting.residence %>">Check Location</a>
-    <% } %>
-    <p>Current Status: <%= meeting.status %></p>
-    <p>Level: <%= meeting.level %></p>
-    <p>Age: <%= meeting.age %></p>
-    <p>Contact Info: <%= meeting.information %></p>
-    
-    
-    
-
-    <a href="/users/<%= user._id %>/meetings/<%= meeting._id %>/edit">
-        <button type="submit">Edit Your Post</button>
-      </a>
-      <br>
-      <br>
-       
-
-     
-     <form
-     action="/users/<%= user._id %>/meetings/<%= meeting._id %>?_method=DELETE"
-     method="POST">
-   
-     <button type="submit">Delete This Post</button>
-   </form>
+    <div class="show-body">
+      <div class="show-header">
+        <h1><%= meeting.position %> <%= meeting.name %></h1>
+        <div class="show-sidebar">
+          <div class="show-actions">
+            <a
+              href="/users/<%= user._id %>/meetings/<%= meeting._id %>/edit"
+            >
+              Edit Your Post
+            </a>
+            <form
+              action="/users/<%= user._id %>/meetings/<%= meeting._id %>?_method=DELETE"
+              method="POST"
+            >
+              <button type="submit">Delete Post</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="show-info-container">
+        <% if (meeting.information) { %>
+        <a href="<%= meeting.information %>" target="_blank">Check Location</a>
+        <% } %> <% if (meeting.residence) { %>
+        <div class="show-residence">
+          <h2>Location:</h2>
+          <p><%= meeting.residence %></p>
+        </div>
+        <% } %>
+        <div class="show-residence">
+            <h2>Age:</h2>
+            <p><%= meeting.age %></p>
+          </div>
+          <div class="show-residence">
+            <h2>School:</h2>
+            <p><%= meeting.school %></p>
+          </div>
+          <div class="show-residence">
+            <h2>Position:</h2>
+            <p><%= meeting.position %>  <%= meeting.status %></p>
+          </div>
+          <div class="show-residence">
+            <h2>Contact Info:</h2>
+            <p><%= meeting.information %></p>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
