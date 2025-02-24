@@ -14,6 +14,8 @@ const MongoStore = require('connect-mongo');
 const authCtrl = require('./controllers/auth.js'); //Import auth controller
 const meetingCtrl = require('./controllers/meetings.js');
 
+const path = require('path');
+
 // NEW MIDDLEWARE Imported
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
@@ -31,6 +33,8 @@ app.use(express.urlencoded({ extended: false}));
 
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
     session({

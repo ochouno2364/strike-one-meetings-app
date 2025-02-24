@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title><%= meeting.name %></title>
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
+
     <h1><%= meeting.position %> <%= meeting.name %></h1>
     <% if (meeting.school) { %>
     <p>I Attend/Coach: <%= meeting.school %></p>

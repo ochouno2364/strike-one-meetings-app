@@ -44,6 +44,7 @@ router.put('/:meetingId', async (req, res) => {
         const meeting = currentUser.meetings.id(req.params.meetingId);
         meeting.set(req.body);
         await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/meetings`)
     } catch (error) {
         console.log(error);
         res.redirect('/')
@@ -64,10 +65,11 @@ router.post('/', async (req, res) => {
 });
 
 // (E)DIT ROUTE
-router.get('/:meetigId/edit', async (req, res) => {
+router.get('/:meetingId/edit', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     const meeting = currentUser.meetings.id(req.params.meetingId);
+    console.log('meeting',meeting);
     res.render('meetings/edit.ejs', {
         meeting: meeting,
     });

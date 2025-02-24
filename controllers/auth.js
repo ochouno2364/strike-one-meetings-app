@@ -31,7 +31,7 @@ router.post('/sign-up', async (req, res) => {
     const hashedPassword = bcrypt.hashSync(req.body.password, 10); // user bycrypt to hash the password
     req.body.password = hashedPassword; // set the the password to the hased pashed words value
     const user = await User.create(req.body); // create the user
-    res.send(`Welcome to the Team ${user.username}` ); 
+    res.redirect('auth/sign-in' ); 
 });
 
 
