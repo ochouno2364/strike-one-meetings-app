@@ -20,12 +20,17 @@ The Application allows users to enter his/her name, school, level, position, res
 * Node.js
 * MONGODB
 * Express
+* Morgan
+* Dotenv
+* Methodoveride
+* session
+* mongoose
 * HTML
 * CSS
 
 
 ## Wireframe Images
-* WireFrame link in Trello Planner, or <img src="path to wireframe images">
+(https://trello.com/b/W0PIBfRm/men-stack-crud-app-project-strike-one-app)
 
 ## Trello Planning
 * Link to trello or planning board - (https://trello.com/b/W0PIBfRm/men-stack-crud-app-project-strike-one-app)
