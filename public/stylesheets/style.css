@@ -225,12 +225,12 @@ ul > a:hover {
   align-items: center;
   height: 100%;
 }
+
+.authheader {
+  color: rgb(51, 25, 3) ;
+}
   
 .signinout-body {
   background-image: url('https://dg5crudsxv7wa.cloudfront.net/images/2022/11/16/Fall_2022_Baseball_Ariels_q1293.png');
 }
 
-.authheader {
- color: #0e0d0d;
- border: #1d6e13 5px;
-}
