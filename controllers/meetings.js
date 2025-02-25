@@ -69,7 +69,6 @@ router.get('/:meetingId/edit', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     const meeting = currentUser.meetings.id(req.params.meetingId);
-    console.log('meeting',meeting);
     res.render('meetings/edit.ejs', {
         meeting: meeting,
     });

@@ -9,7 +9,7 @@
   <body class="new-background">
     <%- include('../partials/_navbar.ejs') %>
     <div class="edit-body">
-    <h1>Edit Meeting Post</h1>
+    <h1 id="edit-post-header">Edit Meeting Post</h1>
 
     <form
     action="/users/<%= user._id %>/meetings/<%= meeting._id %>?_method=PUT"

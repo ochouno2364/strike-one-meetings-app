@@ -8,8 +8,8 @@
   </head>
   <body class="new-background">
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a New Meeting Post</h1>
     <div class="new-body">
+        <h1 id="new-text">Add a New Meeting Post</h1>
     <form action="/users/<%= user._id %>/meetings" method="POST">
         <label for="level">Coach or Player:</label>
         <select id="level" name="level" id="level" required>

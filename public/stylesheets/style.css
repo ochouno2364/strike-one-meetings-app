@@ -1,6 +1,6 @@
 @import url('https://dg5crudsxv7wa.cloudfront.net/images/2023/11/17/DJI_20231015074729_0109_D-Enhanced-NR-2.JPG');
 @import url('https://dg5crudsxv7wa.cloudfront.net/images/2023/1/11/Fall_2022_Baseball_Ariels_GS4cj.png');
-@import url('https://wallpapers.com/images/hd/baseball-field-background-3840-x-2400-kk0g8nwnuwr0ciww.jpg');
+@import url('https://dg5crudsxv7wa.cloudfront.net/images/2022/11/16/Fall_2022_Baseball_Ariels_q1293.png');
 
 
 body {
@@ -189,12 +189,22 @@ ul > a:hover {
 }
 
 .new-background {
-  background-image: url('https://wallpapers.com/images/hd/baseball-field-background-3840-x-2400-kk0g8nwnuwr0ciww.jpg');
+  background-image: url('https://dg5crudsxv7wa.cloudfront.net/images/2023/11/17/DJI_20231015074729_0109_D-Enhanced-NR-2.JPG');
   background-size: 100%;
+  color: #06470c;
   
 }
 
+#new-text {
+  color: #e7ece6;
+}
+
+#edit-post-header {
+  color: #f5f3f3;
+}
+
 .new-body {
+  color:#06470c;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,6 +218,7 @@ ul > a:hover {
 }
 
 .edit-body {
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,3 +226,11 @@ ul > a:hover {
   height: 100%;
 }
   
+.signinout-body {
+  background-image: url('https://dg5crudsxv7wa.cloudfront.net/images/2022/11/16/Fall_2022_Baseball_Ariels_q1293.png');
+}
+
+.authheader {
+ color: #0e0d0d;
+ border: #1d6e13 5px;
+}
