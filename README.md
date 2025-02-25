@@ -1,6 +1,6 @@
-# Baseball Memory Card Game
+# StrikeOne App
 
-#### MATCH ALL BASEBALL CARDS!! 
+#### Connect The Players and Coaches Near You!! 
 ![Screenshot 2025-02-25 171955](https://github.com/user-attachments/assets/51c05bbc-e688-4fa4-9d86-39ea5906bcc9)
 
 ## Description
