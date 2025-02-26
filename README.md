@@ -22,6 +22,8 @@ The Application allows users to enter his/her name, school, level, position, res
 * Express
 * Morgan
 * Dotenv
+* EJS
+* bcrypt
 * Methodoveride
 * session
 * mongoose
