@@ -44,7 +44,8 @@ The Application allows users to enter his/her name, school, level, position, res
 * Allow users to see each others post from diffrent sessions.
 * Allow a user to include a picture.
 * Allow users to message one another through the app.
-* Set up a user inbox. 
+* Set up a user inbox.
+* Using an api to generate other profiles from the web.
 
 
 ## <a name="deployment"></a>Deployed Link
